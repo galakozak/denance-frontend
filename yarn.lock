@@ -2859,6 +2859,18 @@
     randombytes "2.1.0"
     secp256k1 "5.0.1"
 
+"@near-js/crypto@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@near-js/crypto/-/crypto-2.1.0.tgz#784cfccc36e5fbc328491bbf3a2174b09566f2ab"
+  integrity sha512-anKzWTKB+eNRXBRfPkyqoWI41q7x1muDR5NOUEAd/0UxXLItoI79q+xabj4e5tl8utlJlFZaxifmu7VAgxeCJw==
+  dependencies:
+    "@near-js/types" "2.1.0"
+    "@near-js/utils" "2.1.0"
+    "@noble/curves" "1.8.1"
+    borsh "1.0.0"
+    randombytes "2.1.0"
+    secp256k1 "5.0.1"
+
 "@near-js/crypto@2.2.3", "@near-js/crypto@^2.0.0":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@near-js/crypto/-/crypto-2.2.3.tgz#256a92711874848dc00346cf6184db80a34d413b"
@@ -3080,6 +3092,17 @@
     "@noble/hashes" "1.7.1"
     borsh "1.0.0"
 
+"@near-js/transactions@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@near-js/transactions/-/transactions-2.1.0.tgz#fece06c32755c02416b1919979b6024dde2b0cdd"
+  integrity sha512-nYLRfVeo06Wy/fJDSab05CQWV4fe1pWBNLFwGqJSlePdAljBpSXTue+fYJyRiQWzhF14X6QgHhxeQnkTVaCNdA==
+  dependencies:
+    "@near-js/crypto" "2.1.0"
+    "@near-js/types" "2.1.0"
+    "@near-js/utils" "2.1.0"
+    "@noble/hashes" "1.7.1"
+    borsh "1.0.0"
+
 "@near-js/transactions@2.2.3", "@near-js/transactions@^2.0.0":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@near-js/transactions/-/transactions-2.2.3.tgz#59f17382bc058d6c48d288b4cd24f38a08d3a9e2"
@@ -3100,6 +3123,11 @@
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@near-js/types/-/types-0.3.1.tgz#35f2649f85881d72fc231a16142e1f0e3b0e8377"
   integrity sha512-8qIA7ynAEAuVFNAQc0cqz2xRbfyJH3PaAG5J2MgPPhD18lu/tCGd6pzYg45hjhtiJJRFDRjh/FUWKS+ZiIIxUw==
+
+"@near-js/types@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@near-js/types/-/types-2.1.0.tgz#96e4f3080361a66ecda48db098cfcdf8a4d4895c"
+  integrity sha512-sL7r1TgXSLEFXWb5CRc5lkMKfxNyErGLm2HDbMVeNQrIHaXrkosI3GMcY/CnnNhUejsew7CQbY4XaupFqM7n2A==
 
 "@near-js/types@2.2.3", "@near-js/types@^2.0.0":
   version "2.2.3"
@@ -3133,6 +3161,16 @@
   dependencies:
     "@near-js/types" "0.3.1"
     "@scure/base" "^1.2.0"
+    depd "2.0.0"
+    mustache "4.0.0"
+
+"@near-js/utils@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@near-js/utils/-/utils-2.1.0.tgz#d692955d6b317d48a565800129ea1b6128e00e48"
+  integrity sha512-Zj09Q38Aifj2bU+NDy1oAJX5FpSuDU67bv9AY2rEpsvLiBZY5B1oRGLOs7u/P50NByYULfD8odPj1gRtgkgsZQ==
+  dependencies:
+    "@near-js/types" "2.1.0"
+    "@scure/base" "^1.2.4"
     depd "2.0.0"
     mustache "4.0.0"
 
@@ -4938,7 +4976,7 @@
   resolved "https://registry.yarnpkg.com/@safe-global/safe-gateway-typescript-sdk/-/safe-gateway-typescript-sdk-3.22.2.tgz#d4ff9972e58f9344fc95f8d41b2ec6517baa8e79"
   integrity sha512-Y0yAxRaB98LFp2Dm+ACZqBSdAmI3FlpH/LjxOZ94g/ouuDJecSq0iR26XZ5QDuEL8Rf+L4jBJaoDC08CD0KkJw==
 
-"@scure/base@^1.0.0", "@scure/base@^1.2.4":
+"@scure/base@1.2.6", "@scure/base@^1.0.0", "@scure/base@^1.2.4":
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.2.6.tgz#ca917184b8231394dd8847509c67a0be522e59f6"
   integrity sha512-g/nm5FgUa//MCj1gV09zTJTaM6KBAHqLN907YVQqf7zC49+DcO4B1so4ZX07Ef10Twr6nuqYEH9GEggFXA4Fmg==
