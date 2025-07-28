@@ -10,20 +10,20 @@ import Link from "next/link"
 export function NavbarDesktop() {
   const { isActive } = useIsActiveLink()
 
-  const isAccountActive = isActive(navigation.account)
-  const isTradeActive = isActive(navigation.home) || isActive(navigation.otc)
+  const isWalletActive = isActive(navigation.account)
+  const isHomeActive = isActive(navigation.home) || isActive(navigation.otc)
+  const isCryptoActive = isActive(navigation.crypto)
 
   return (
     <nav className="flex justify-between items-center gap-4">
-      {/* Account */}
-      <NavItem
-        label="Account"
-        isActive={isAccountActive}
-        href={navigation.account}
-      />
+      {/* Home */}
+      <NavItem label="Home" isActive={isHomeActive} href={navigation.home} />
 
-      {/* Trade */}
-      <NavItem label="Trade" isActive={isTradeActive} href={navigation.home} />
+      {/* Crypto */}
+      <NavItem label="Crypto" isActive={isCryptoActive} href={navigation.crypto} />
+
+      {/* Wallet */}
+      <NavItem label="Wallet" isActive={isWalletActive} href={navigation.account} />
     </nav>
   )
 }

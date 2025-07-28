@@ -23,7 +23,7 @@ export async function ThemeProvider({ children }: { children: ReactNode }) {
   const accentColor = accentsColors[tpl]
 
   return (
-    <NextThemesThemeProvider attribute="class">
+    <NextThemesThemeProvider attribute="class" defaultTheme="dark">
       <Theme accentColor={accentColor} hasBackground={false}>
         {children}
       </Theme>
