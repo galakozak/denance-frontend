@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowsLeftRight, Plus } from "@phosphor-icons/react"
+import { ArrowsLeftRight, Plus, House } from "@phosphor-icons/react"
 import { navigation } from "@src/constants/routes"
 import { useIsActiveLink } from "@src/hooks/useIsActiveLink"
 import { cn } from "@src/utils/cn"
@@ -11,40 +11,59 @@ import type { ReactNode } from "react"
 export function NavbarMobile() {
   const { isActive } = useIsActiveLink()
 
-  const isAccountActive = isActive(navigation.account)
-  const isTradeActive = isActive(navigation.home) || isActive(navigation.otc)
+  const isWalletActive = isActive(navigation.account)
+  const isHomeActive = isActive(navigation.home) || isActive(navigation.otc)
+  const isCryptoActive = isActive(navigation.crypto)
   const isDepositActive = isActive(navigation.deposit)
 
   return (
     <>
       <div className="fixed bottom-0 z-50 left-0 md:hidden w-full px-5 pt-3 pb-[max(env(safe-area-inset-bottom,0px),theme(spacing.3))] bg-gray-1 border-t-[1px] border-gray-a3">
         <nav className="flex justify-around items-center gap-4">
-          {/* Account */}
+          {/* Home */}
           <NavItem
-            href={navigation.account}
-            label="Account"
-            isActive={isAccountActive}
+            href={navigation.home}
+            label="Home"
+            isActive={isHomeActive}
             iconSlot={
               <NavItem.DisplayIcon>
-                {<WalletIcon active={isAccountActive} />}
+                <House
+                  className={cn(
+                    "size-4",
+                    isHomeActive ? "text-gray-12" : "text-gray-11"
+                  )}
+                  weight="bold"
+                />
               </NavItem.DisplayIcon>
             }
           />
 
-          {/* Trade */}
+          {/* Crypto */}
           <NavItem
-            href={navigation.home}
-            label="Trade"
-            isActive={isTradeActive}
+            href={navigation.crypto}
+            label="Crypto"
+            isActive={isCryptoActive}
             iconSlot={
               <NavItem.DisplayIcon>
                 <ArrowsLeftRight
                   className={cn(
                     "size-4",
-                    isTradeActive ? "text-gray-12" : "text-gray-11"
+                    isCryptoActive ? "text-gray-12" : "text-gray-11"
                   )}
                   weight="bold"
                 />
+              </NavItem.DisplayIcon>
+            }
+          />
+
+          {/* Wallet */}
+          <NavItem
+            href={navigation.account}
+            label="Wallet"
+            isActive={isWalletActive}
+            iconSlot={
+              <NavItem.DisplayIcon>
+                {<WalletIcon active={isWalletActive} />}
               </NavItem.DisplayIcon>
             }
           />
