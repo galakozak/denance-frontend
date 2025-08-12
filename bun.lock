@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "defuse-frontend",
+      "name": "denance-frontend",
       "dependencies": {
         "@clickhouse/client": "^1.11.2",
         "@creit.tech/stellar-wallets-kit": "^1.7.7",
